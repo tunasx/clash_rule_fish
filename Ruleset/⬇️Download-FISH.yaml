@@ -1,7 +1,7 @@
 payload:
   ## 无论何时必须被代理，而且为大容量下载的域名列表
   #################### 下载服务商
-  - GEOSITE,mega # Mega.nz下载服务商，提供云存储和文件共享服务，常用于大文件的分发和下载
+  #- GEOSITE,mega # Mega.nz下载服务商，提供云存储和文件共享服务，常用于大文件的分发和下载
 
   #################### 软件资源下载
   - DOMAIN,release-assets.githubusercontent.com # GitHub release资源
@@ -22,9 +22,9 @@ payload:
   - DOMAIN,static.rust-lang.org # 代码托管服务器，包括大部分GNU工具链，编译openwrt会用到
 
   #################### 💻CodeSource，程序源码规则集，一般用于编译或下载程序资源/更新等
-  - GEOSITE,category-container # 各种容器服务
-  - GEOSITE,docker # docker容器服务
-  - GEOSITE,python # python服务，例如pip直连下载较慢
+  #- GEOSITE,category-container # 各种容器服务
+  #- GEOSITE,docker # docker容器服务
+  #- GEOSITE,python # python服务，例如pip直连下载较慢
   - DOMAIN,artifacts.bitwarden.com # bitwarden安装程序资源下载网址，不代理的话bitwarden安装过程要10+分钟
   - DOMAIN,www.python.org # Python源码相关分发
   - DOMAIN,cdn.kernel.org # Linux内核下载地址

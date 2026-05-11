@@ -121,14 +121,14 @@ dns:
     # fakeip规则列表，按照命中频率、优先级和包含关系进行排序
     - geosite,google,fake-ip # 谷歌域名，部分域名因存在中国业务名被包含到cn中直连而出现商店下载问题，须指明Fakeip匹配规则
     - rule-set,🪜Proxy-FISH,fake-ip # 个人收集的代理域名，包含GeoSite未分类或分类到cn的零散域名
-    - geosite,category-ads-all,real-ip # 广告域名，交给redirect-host模块返回空结果
+    #- geosite,category-ads-all,real-ip # 广告域名，交给redirect-host模块返回空结果
     - rule-set,🔐PT-Tracker,real-ip # PT tracker，必须直连，否则会代理上传下载
-    - geosite,category-public-tracker,real-ip # 公共tracker域名
+    #- geosite,category-public-tracker,real-ip # 公共tracker域名
     - geosite,category-ntp,real-ip # NTP域名
     - geosite,apple,real-ip # 苹果域名，配合双WAN分流可以避免长链接耗电问题
-    - geosite,category-game-platforms-download,real-ip # 各类游戏平台下载域名，包括steam下载
-    - geosite,tailscale,real-ip # Tailscale域名，包括P2P打洞过程
-    - geosite,category-cas,real-ip # 各类证书颁发机构域名
+    #- geosite,category-game-platforms-download,real-ip # 各类游戏平台下载域名，包括steam下载
+    #- geosite,tailscale,real-ip # Tailscale域名，包括P2P打洞过程
+    #- geosite,category-cas,real-ip # 各类证书颁发机构域名
     - rule-set,🌐Direct-FISH,real-ip # 个人收集的直连域名，包含GeoSite未分类或分类到非cn的零散域名
     - geosite,cn,real-ip # 中国域名
     - MATCH,fake-ip # 因cn集较小，因此采用未匹配的全部fakeip
@@ -446,22 +446,22 @@ rule-providers-general: &rule-providers-general
 rule-providers:
   🪜Proxy-FISH:
     <<: *rule-providers-general
-    url: https://raw.githubusercontent.com/refined-fish/clash_rule_fish/refs/heads/main/Ruleset/🪜Proxy-FISH.yaml
+    url: https://raw.githubusercontent.com/tunasx/clash_rule_fish/refs/heads/main/Ruleset/🪜Proxy-FISH.yaml
     path: ./providers/rule/rule-provider_🪜Proxy-FISH.yaml
 
   🌐Direct-FISH:
     <<: *rule-providers-general
-    url: https://raw.githubusercontent.com/refined-fish/clash_rule_fish/refs/heads/main/Ruleset/🌐Direct-FISH.yaml
+    url: https://raw.githubusercontent.com/tunasx/clash_rule_fish/refs/heads/main/Ruleset/🌐Direct-FISH.yaml
     path: ./providers/rule/rule-provider_🌐Direct-FISH.yaml
 
   ⬇️Download-FISH:
     <<: *rule-providers-general
-    url: https://raw.githubusercontent.com/refined-fish/clash_rule_fish/refs/heads/main/Ruleset/⬇️Download-FISH.yaml
+    url: https://raw.githubusercontent.com/tunasx/clash_rule_fish/refs/heads/main/Ruleset/⬇️Download-FISH.yaml
     path: ./providers/rule/rule-provider_⬇️Download-FISH.yaml
 
   🔐PT-Web-FISH:
     <<: *rule-providers-general
-    url: https://raw.githubusercontent.com/refined-fish/clash_rule_fish/refs/heads/main/Ruleset/🔐PT-Web-FISH.yaml
+    url: https://raw.githubusercontent.com/tunasx/clash_rule_fish/refs/heads/main/Ruleset/🔐PT-Web-FISH.yaml
     path: ./providers/rule/rule-provider_🔐PT-Web-FISH.yaml
 
   🔐PT-Tracker:
